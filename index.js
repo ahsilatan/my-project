@@ -19,7 +19,7 @@ let currentDate = document.querySelector("#current-data");
 currentDate.innerHTML = `${day} ${hour}:${minute}`;
 //
 function showTemp(response) {
-  let temperature = Math.round(response.data.main.temp);
+  temperature = Math.round(response.data.main.temp);
   let icon = document.querySelector("#mainIcon");
   document.querySelector("#temp").innerHTML = temperature;
   document.querySelector("#city-name").innerHTML = response.data.name;
@@ -48,11 +48,22 @@ form.addEventListener("submit", searchCity);
 function convertToFtemp(event) {
   event.preventDefault();
   let tempElemets = document.querySelector("#temp");
-  let temperature = tempElemets.innerHTML;
-  tempElemets.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  let fTemp = (temperature * 9) / 5 + 32;
+  tempElemets.innerHTML = Math.round(fTemp);
 }
+
+function convertToCtemp(event) {
+  event.preventDefault();
+  let tempElemets = document.querySelector("#temp");
+  tempElemets.innerHTML = temperature;
+}
+
 let fTemperature = document.querySelector("#fTemp");
 fTemperature.addEventListener("click", convertToFtemp);
+
+let cTemperature = document.querySelector("#cTemp");
+cTemperature.addEventListener("click", convertToCtemp);
+
 //
 function showLocation(event) {
   event.preventDefault();
