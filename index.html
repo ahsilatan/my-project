@@ -19,64 +19,36 @@
   <body>
     <div class="full">
       <form class="search-form" id="search-city">
-        <div class="col-6">
-          <input
-            type="text"
-            class="form-control shadow-sm"
-            placeholder="Enter a city..."
-            id="input-city"
-            autocomplete="off"
-            autofocus="on"
-          />
-        </div>
-        <div class="col-1">
-          <input
-            type="submit"
-            value="Search"
-            class="form-control btn btn-primary shadow-sm"
-          />
-        </div>
-        <div class="col-1">
-          <button class="btn btn-success" id="current-location">
-            Location
-          </button>
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="text"
+              class="form-control shadow-sm"
+              placeholder="Enter a city..."
+              id="input-city"
+              autocomplete="off"
+              autofocus="on"
+            />
+          </div>
+          <div class="col-2">
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-primary shadow-sm"
+            />
+          </div>
+          <div class="col-2">
+            <button class="btn btn-success" id="current-location">
+              Location
+            </button>
+          </div>
         </div>
       </form>
       <div class="highlights">
-        <h2>Today highlights</h2>
+       
         <div class="container">
           <div class="row">
-            <div class="col-3">
-              <div class="sunset">
-                <h3>Sunrise and sunset</h3>
-                <ul class="sun">
-                  <li>
-                    <img src="img/sunrise.svg" alt="sunrise" id="sunrise" />
-                    05:13
-                  </li>
-                  <li>
-                    <img src="img/sunset.svg" alt="sunset" id="sunset" /> 20:33
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="sunset">
-                <h3>Wind status</h3>
-                <p class="highlight">↓ <span id="wind"></span>km/h</p>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="sunset">
-                <h3>Humidity</h3>
-                <p class="highlight"><span id="humidity"></span>%</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container-card">
-          <div class="row">
-            <div class="col">
+            <div class="col">  
               <div class="main-card">
                 <div class="card" style="width: 285px">
                   <h1 class="card-title" id="city-name"></h1>
@@ -84,7 +56,7 @@
                     class="weather"
                     src="img/cloud.svg"
                     alt="cloud"
-                    width="150px"
+                    width="100px"
                   />
                   <div class="card-body">
                     <p class="card-text">
@@ -97,12 +69,27 @@
                       </strong>
                       <br />
                       <span id="current-data"> Monday 18:15</span>
-                      <small id="weather-discription"></small>
+                      <br><small id="weather-discription"></small></br>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col">
+              <div class="sunset">
+                <h3 class="status">Wind status</h3>
+                <p class="highlight">↓ <span id="wind"></span>km/h</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="sunset">
+                <h3 class="status">Humidity</h3>
+                <p class="highlight"><span id="humidity"></span>%</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row">
             <div class="col">
               <div class="small-card">
                 <div class="card" style="width: 100px">

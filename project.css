@@ -1,37 +1,36 @@
 body {
   background: linear-gradient(rgb(109, 192, 236) 27%, rgb(191, 241, 236) 73%);
-}
-.search {
-  margin: 0 auto;
+  background-attachment: fixed;
   display: block;
-  width: 150px;
-  border-radius: 15px;
-  border: 1px solid #abadb3;
 }
-
+.search-form {
+  margin-bottom: 25px;
+  margin-left: 12px;
+}
+.card {
+  background: #bff1ec;
+}
 h1 {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 30px;
 }
-h2 {
-  font-size: 35px;
-  position: relative;
-  left: 575px;
-  top: 165px;
-}
+
 h3 {
   text-align: center;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+.status {
+  margin-top: 100px;
 }
 .weather {
   display: block;
   margin: 0 auto;
 }
 strong {
-  font-size: 30px;
+  font-size: 25px;
 }
 small {
   font-size: 20px;
@@ -39,45 +38,31 @@ small {
 ul {
   list-style: none;
 }
-.main-card {
-  margin-left: 30px;
-}
+
 .card-text {
-  margin-left: 40px;
-  font-size: 25px;
-  margin-bottom: 60px;
+  font-size: 20px;
+  text-align: center;
 }
 .small-card-text {
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 .small-card {
-  margin-top: 224px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
-.container {
-  position: relative;
-  left: 300px;
-  top: 175px;
-}
-.sun {
-  text-align: center;
-  padding-left: 0;
-}
+
 .highlight {
   text-align: center;
 }
-.search {
-  position: relative;
-  left: 100px;
-  top: 150px;
-  width: 600px;
-}
+
 .full {
   border: 1px solid #dadde1;
   padding: 20px;
-  margin: 40px auto;
+  margin: 20px auto;
+
   max-width: fit-content;
   max-height: fit-content;
   border-radius: 10px;
@@ -93,5 +78,5 @@ ul {
   text-decoration: none;
 }
 .source {
-  margin: 30px;
+  margin: 12px;
 }
