@@ -18,6 +18,35 @@ if (minute < 10) {
 let currentDate = document.querySelector("#current-data");
 currentDate.innerHTML = `${day} ${hour}:${minute}`;
 //
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col">
+      <div class="card" style="width: 100px">
+        <h3>${day}</h3>
+          <img
+            class="weather"
+            src="img/cloud.svg"
+            alt="cloud"
+            width="50px"
+          />
+        <div class="small-card-text">
+          <p>16°C</p>
+        </div>
+      </div>
+    </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
+//
 function showTemp(response) {
   temperature = Math.round(response.data.main.temp);
   let icon = document.querySelector("#mainIcon");
